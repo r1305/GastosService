@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>servlets.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GuardarGasto</servlet-name>
+        <servlet-class>servlets.GuardarGasto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarGastos</servlet-name>
+        <servlet-class>servlets.ListarGastos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarCategorias</servlet-name>
+        <servlet-class>servlets.ListarCategorias</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarGasto</servlet-name>
+        <url-pattern>/GuardarGasto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarGastos</servlet-name>
+        <url-pattern>/ListarGastos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarCategorias</servlet-name>
+        <url-pattern>/ListarCategorias</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
