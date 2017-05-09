@@ -20,7 +20,7 @@ public class Test {
         // TODO code application logic here
         Dao d=new Dao();
         //System.out.println(d.login("rogger.aburto", "123"));
-        System.out.println(d.listarGastos("1"));
+        System.out.println(d.login("rogger.aburto","123"));
     }
     
 }

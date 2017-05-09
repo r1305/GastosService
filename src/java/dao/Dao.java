@@ -23,16 +23,17 @@ import org.json.simple.JSONObject;
 public class Dao {
     private Conexion c = new Conexion();
     public String login(String u, String p) {
-        String id;
         JSONObject o = new JSONObject();
         MongoCollection<Document> col = c.getConnection("usuarios");
         Document doc = col.find(and(eq("usuario", u), eq("psw", p))).first();
         try {
             o.put("nombre", doc.getString("nombre"));
             o.put("id", doc.getInteger("_id"));
+            o.put("email",doc.getString("usuario"));
         } catch (NullPointerException e) {
             System.out.println(e);
             o.put("nombre", "error");
+            o.put("email",doc.getString("usuario"));
             o.put("id", "error");
         }
         return o.toString();
